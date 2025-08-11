@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plant Height Predictor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2e4a34;
+      background: linear-gradient(120deg, #f0fbf4, #d9ebdd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      padding: 2em 3em;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+    }
+    h2 {
+      margin-bottom: 1em;
+      color: #346534;
+      font-size: 1.8em;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 1.2em;
+      border: 2px solid #9fcc9f;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus {
+      border-color: #2e4a34;
+      outline: none;
+    }
+    button {
+      background: #6fbf73;
+      color: white;
+      border: none;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #5ea05d;
+      transform: translateY(-2px);
+    }
+    .leaf {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      font-size: 3em;
+      transform: rotate(15deg);
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="leaf">🍃</div>
+    <h2>Plant Height Predictor</h2>
+    <form action="/predict" method="post">
+      <label for="sunlight">Sunlight(lux):</label>
+      <input type="text" id="sunlight" name="sunlight" placeholder="e.g., 120" required>
+      <button type="submit">Grow My Plant!</button>
+    </form>
+  </div>
+</body>
+</html>
